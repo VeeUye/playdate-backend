@@ -1,0 +1,19 @@
+const { postEventSchema, putEventSchema } = require('../models/eventSchema');
+const { postUserSchema, putUserSchema } = require('../models/userSchema');
+const validateData = require('./helpers');
+ 
+exports.postEventValidation = (req, res, next) => {
+  validateData(req, res, next, postEventSchema);
+};
+ 
+exports.putEventValidation = (req, res, next) => {
+  validateData(req, res, next, putEventSchema);
+};
+ 
+exports.postUserValidation = (req, res, next) => {
+  validateData(req, res, next, postUserSchema);
+};
+ 
+exports.putUserValidation = (req, res, next) => {
+  validateData(req, res, next, putUserSchema);
+};
